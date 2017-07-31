@@ -4,7 +4,7 @@
 Disambiguation tool for geographic locations using external repositories such as Wikidata and Geonames
 
 ## Configuration
-Update src/main/java/com/cervantesvirtual/rdf/rda2genames/GeonamesService.class with your Geonames web services user:
+Update [GeonamesService.class](src/main/java/com/cervantesvirtual/rdf/rda2geonames/GeonameService.java) with your Geonames web services user:
 ```
 private static String username = "yourUser";
 ```
