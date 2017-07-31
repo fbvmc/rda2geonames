@@ -7,8 +7,7 @@ import org.geonames.WebService;
 
 public class GeonameService 
 {
-	//private static String username = "gcandela";
-	private static String username = "gcandela2";
+	private static String username = "yourUser";
 	private static int maxResults = 5;
 	
     public ToponymSearchResult search(String query){
