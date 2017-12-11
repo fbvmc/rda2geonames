@@ -14,10 +14,7 @@ Create the folder
 /opt/tools/geonames
 ```
 
-And add 
-```
-[ner-model.ser.gz](src/main/resources/ner-model.ser.gz)
-```
+And add [ner-model.ser.gz](src/main/resources/ner-model.ser.gz)
 
 Execute 
 ```
