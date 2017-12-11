@@ -16,14 +16,18 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.util.FileManager;
 import org.apache.jena.vocabulary.DC;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.cervantesvirtual.rdf.rda2geonames.WikidataService;
 
 public class RDAItem {
 
-	public static String DOWNLOAD_FOLDER = System.getProperty("user.home") + "/geonames";
+	public static String DOWNLOAD_FOLDER = "/tmp/geonames";
 	public static String DOWNLOAD_URL = "http://data.cervantesvirtual.com/getRDF?uri=";
 	public static String DOMAIN = "http://data.cervantesvirtual.com/";
+	
+	Logger logger = LogManager.getLogger(RDAItem.class);
 	
 	private String uri;
 	private String idManifestation;
@@ -46,6 +50,7 @@ public class RDAItem {
 	private List<NERItem> partsTokens;
 	
     public RDAItem(String uri){
+    	
     	this.uri = uri;
 		this.setIdManifestation(uri.replace(DOMAIN + "manifestation/", ""));
 		this.setSubjects(new ArrayList<String>()); 
@@ -142,25 +147,25 @@ public class RDAItem {
 	
 	public void showNER() {
 		for (NERItem s: this.getPlaceTokens()){
-			System.out.println("token place:" + s.getValue());
+			logger.trace("token place:" + s.getValue());
 		}
 		for (NERItem s: this.getTitleTokens()){
-			System.out.println("token title:" + s.getValue());
+			logger.trace("token title:" + s.getValue());
 		}
 		for (NERItem s: this.getSubjectTokens()){
-			System.out.println("token subject:" + s.getValue());
+			logger.trace("token subject:" + s.getValue());
 		}
 		for (NERItem s: this.getEditionStatementTokens()){
-			System.out.println("token edition:" + s.getValue());
+			logger.trace("token edition:" + s.getValue());
 		}
 		for (NERItem s: this.getAuthorTokens()){
-			System.out.println("token author:" + s.getValue());
+			logger.trace("token author:" + s.getValue());
 		}
 		for (NERItem s: this.getPrinterTokens()){
-			System.out.println("token printer:" + s.getValue());
+			logger.trace("token printer:" + s.getValue());
 		}
 		for (NERItem s: this.getPartsTokens()){
-			System.out.println("token parts:" + s.getValue());
+			logger.trace("token parts:" + s.getValue());
 		}
 	}
 
@@ -175,7 +180,8 @@ public class RDAItem {
 	public void setFRBR(){
 		File rdfFile = new File( DOWNLOAD_FOLDER, "manifestation-" + idManifestation + ".rdf");
 		try {
-			FileUtils.copyURLToFile(new URL(DOWNLOAD_URL + uri), rdfFile);
+			 FileManager.get().addLocatorClassLoader(RDAItem.class.getClassLoader());
+			FileUtils.copyURLToFile(new URL(DOWNLOAD_URL + uri), rdfFile);logger.trace("rdfFile.getPath:" + rdfFile.getPath());
 			manifestationModel = FileManager.get().loadModel(rdfFile.getPath(), null, "RDF/XML");
 			
 			Property titleProperty = manifestationModel.createProperty("http://rdaregistry.info/Elements/m/title");
@@ -249,7 +255,7 @@ public class RDAItem {
 			        	try {
 							this.authors = wikidataService.getAuthorData("", idAuthor);
 						} catch (Exception e) {
-							System.out.println("RDAItem setAuthors Error: " + e.getMessage());
+							logger.trace("RDAItem setAuthors Error: " + e.getMessage());
 						}
 			        }
 			    }
@@ -267,15 +273,15 @@ public class RDAItem {
 			        	try {
 							this.setPrinters(wikidataService.getAuthorData("", idAuthor));
 						} catch (Exception e) {
-							System.out.println("RDAItem setPrinters Error: " + e.getMessage());
+							logger.trace("RDAItem setPrinters Error: " + e.getMessage());
 						}
 			        }
 			    }
 		    }
 		} catch (MalformedURLException e) {
-			System.out.println("RDAItem MalformedURLException: " + e.getMessage());
+			logger.trace("RDAItem MalformedURLException: " + e.getMessage());
 		} catch (IOException e) {
-			System.out.println("RDAItem IOException: " + e.getMessage());
+			logger.trace("RDAItem IOException: " + e.getMessage());
 		}
 	}
 

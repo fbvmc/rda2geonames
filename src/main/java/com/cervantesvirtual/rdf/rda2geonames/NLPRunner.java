@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.cervantesvirtual.rdf.rda2geonames.model.NERItem;
 import com.cervantesvirtual.rdf.rda2geonames.model.RDAItem;
 
@@ -82,14 +85,13 @@ public class NLPRunner {
 	}
 
 	private void handleEntity(String inKey, StringBuilder inSb, List<NERItem> tokens) {
-		System.out.println("handleEntity:" + inKey);
 		if(inKey.equals("LOC"))
 		    tokens.add(new NERItem(inKey, inSb.toString()));
 		inSb.setLength(0);
 	}
 	
 	public void process(String s, List<NERItem> items){
-		System.out.println("### Init process s:" + s);
+		
 		
 		s = s.replaceAll("\\[", " ");
 		s = s.replaceAll("\\]", " ");
@@ -146,30 +148,32 @@ public class NLPRunner {
 	}
 
 	public static void main(String[] args){
+		
+		Logger logger = LogManager.getLogger(NLPRunner.class);
+		
 		NLPRunner nlp = new NLPRunner();
-		String fileName = "src/main/resources/uris.txt";
-
-		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-
-			String line;
-			while ((line = br.readLine()) != null) {
-				nlp.RDAItems.add(new RDAItem(line));
-			}
-
-		} catch (IOException e) {
-			System.out.println("Error reading uris file: " + e.getMessage());
-		}
-
-		try {
+		
+		//String fileName = "src/main/resources/uris.txt";
+		String uri = "http://data.cervantesvirtual.com/manifestation/283249";
+		if(args.length == 0){
+	        logger.trace("Proper Usage is: java -jar target/rda2geonames-0.0.1-jar-with-dependencies.jar uri");
+	        logger.trace("Default uri:" + uri);
+	    }else{
+	    	uri = args[0];
+	    }
+		
+		try{
+		    nlp.RDAItems.add(new RDAItem(uri));
 			boolean forceStatistics = false;
 		    nlp.start();
 		    for(RDAItem ri: nlp.RDAItems){
 		    	ri.showNER();
 		    	WeightAlgorithm weightAlgorithm = new WeightAlgorithm(forceStatistics);
+		    	logger.trace("### Init process for place of publication: " + ri.getPlacePublication());
 		    	weightAlgorithm.process(ri);
 		    }
 		}catch(Exception e){
-			System.out.println("Error:" + e.getMessage());
+			logger.trace("Error:" + e.getMessage());
 		}
 	}
 }

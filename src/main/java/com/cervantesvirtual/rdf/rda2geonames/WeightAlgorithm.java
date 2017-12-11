@@ -3,6 +3,8 @@ package com.cervantesvirtual.rdf.rda2geonames;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.geonames.Toponym;
 import org.geonames.ToponymSearchResult;
 
@@ -16,6 +18,8 @@ public class WeightAlgorithm {
 	private String country;
 	private boolean forceStatistics;
 	
+	Logger logger = LogManager.getLogger(WeightAlgorithm.class);
+	
 	public WeightAlgorithm(){
 		result = new ArrayList<GeonameItem>();
 		setForceStatistics(false);
@@ -27,7 +31,7 @@ public class WeightAlgorithm {
 	}
 	
 	public void process(RDAItem item){
-		System.out.println("start process weight size place tokens:" + item.getPlaceTokens().size());
+		logger.trace("start process weight size place tokens:" + item.getPlaceTokens().size());
 		if(item.getPlaceTokens().size() > 0){
 			for (Object e : item.getPlaceTokens()) {
 				String queryPlace = ((NERItem)e).getValue();
@@ -35,7 +39,7 @@ public class WeightAlgorithm {
 				queryPlace = queryPlace.replaceAll("\\?", "");
 				queryPlace = queryPlace.replaceAll("Cordoua", "Córdoba");
 				queryPlace = queryPlace.replaceAll("Cordubae", "Córdoba");
-				System.out.println("queryPlace:" + queryPlace);
+				logger.trace("queryPlace:" + queryPlace);
 				GeonameService geonames = new GeonameService();
 				
 				ToponymSearchResult searchResult = geonames.search(queryPlace);
@@ -50,7 +54,7 @@ public class WeightAlgorithm {
 					geonameItem.setPlace(t.getName());
 					geonameItem.setIdGeonames(t.getGeoNameId()+"");
 					
-					System.out.println("PLACE matching IdGeonames: " + t.getGeoNameId() + " " + t.getName() + " country: " + t.getCountryName());
+					logger.trace("PLACE matching IdGeonames: " + t.getGeoNameId() + " " + t.getName() + " country: " + t.getCountryName());
 					String countryPlace = t.getCountryName();
 					
 					for (Object s : item.getEditionStatementTokens()) {
@@ -89,7 +93,7 @@ public class WeightAlgorithm {
 						
 						// remove query place in title Sevilla Cordoba 563300
 						queryTitle = queryTitle.replaceAll(queryPlace, "").trim();
-						//System.out.println("titletokens weight algo:" + queryTitle);
+						//logger.trace("titletokens weight algo:" + queryTitle);
 						
 						if(!queryTitle.isEmpty() && !queryTitle.equalsIgnoreCase(queryPlace)){
 							ToponymSearchResult searchResultSubject = geonames.search(queryTitle);
@@ -162,7 +166,7 @@ public class WeightAlgorithm {
 			GeonameItem maxItem = getMaxValue();
 			CompareItemsService.compare(maxItem.getUri(), maxItem.getIdGeonames());
 			
-			System.out.println("####weight algorithm fisnish:" + maxItem);
+			logger.trace("#### Weight algorithm result:" + maxItem);
 		}
 	}
 	
@@ -172,7 +176,7 @@ public class WeightAlgorithm {
 			resultItem = result.get(0);
 		
 		for(GeonameItem ge: result){
-			System.out.println("compare:" + ge);
+			logger.trace("compare:" + ge);
 			if(resultItem.getPonderatedValue() < ge.getPonderatedValue())
 				resultItem = ge;
 			else if(forceStatistics && resultItem.getPonderatedValue() == ge.getPonderatedValue()){
@@ -201,7 +205,7 @@ public class WeightAlgorithm {
 	        if(!t.getCountryName().equals(country))
 	             return false;
 	    }
-	    System.out.println("Same true");
+	    logger.trace("Same true");
 	    this.country = country;
 	    return true;
 	    

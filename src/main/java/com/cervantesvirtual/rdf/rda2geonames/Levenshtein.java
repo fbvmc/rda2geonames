@@ -1,5 +1,8 @@
 package com.cervantesvirtual.rdf.rda2geonames;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Levenshtein {
 	 
     public static int distance(String a, String b) {
@@ -23,8 +26,10 @@ public class Levenshtein {
     }
  
     public static void main(String [] args) {
+    	Logger logger = LogManager.getLogger(Levenshtein.class);
+		
         String [] data = { "Cuenca", "Cuenca", " Cuenca / Mariscal Lamar ", "Cantón Cuenca" };
         for (int i = 0; i < data.length-1; i++)
-            System.out.println("distance(" + data[i] + ", " + data[i+1] + ") = " + distance(data[i], data[i+1]));
+        	logger.trace("distance(" + data[i] + ", " + data[i+1] + ") = " + distance(data[i], data[i+1]));
     }
 }
