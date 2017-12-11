@@ -43,7 +43,7 @@ public class CompareItemsService {
             		comparisonText = "Not matched:" + uriManifestation + " calculated:" + idGeonamesCalculated + " original:" + idGeonames + "\n";
             	
             	try (Writer writer = new BufferedWriter(new OutputStreamWriter(
-                        new FileOutputStream("src/main/resources/comparison-results.txt", true), "utf-8"))) {
+                        new FileOutputStream("/opt/tools/geonames/comparison-results.txt", true), "utf-8"))) {
                     writer.write(comparisonText);
             	} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block

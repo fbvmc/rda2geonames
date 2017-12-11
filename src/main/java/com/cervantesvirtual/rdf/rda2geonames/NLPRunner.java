@@ -45,7 +45,8 @@ public class NLPRunner {
 				"edu/stanford/nlp/models/pos-tagger/spanish/spanish-distsim.tagger");
 		// props.setProperty("ner.model",
 		// "edu/stanford/nlp/models/ner/spanish.ancora.distsim.s512.crf.ser.gz");
-		props.setProperty("ner.model", "src/main/resources/ner-model.ser.gz");
+		//props.setProperty("ner.model", "src/main/resources/ner-model.ser.gz");
+		props.setProperty("ner.model", "/opt/tools/geonames/ner-model.ser.gz"); // configuration for jar
 		// props.setProperty("regexner.mapping",
 		// "edu/stanford/nlp/models/kbp/kbp_regexner_mapping_sp.tag");
 		props.setProperty("ner.applyNumericClassifiers", "false");
@@ -156,7 +157,7 @@ public class NLPRunner {
 		//String fileName = "src/main/resources/uris.txt";
 		String uri = "http://data.cervantesvirtual.com/manifestation/283249";
 		if(args.length == 0){
-	        logger.trace("Proper Usage is: java -jar target/rda2geonames-0.0.1-jar-with-dependencies.jar uri");
+	        logger.trace("Proper Usage is: java -jar rda2geonames-0.0.1-jar-with-dependencies.jar uri");
 	        logger.trace("Default uri:" + uri);
 	    }else{
 	    	uri = args[0];
