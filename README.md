@@ -4,10 +4,14 @@
 Disambiguation tool for geographic locations using external repositories such as Wikidata and Geonames
 
 ## Configuration
-Update [GeonamesService.class](src/main/java/com/cervantesvirtual/rdf/rda2geonames/GeonameService.java) with your Geonames web services user:
+Update [GeonamesService.java](src/main/java/com/cervantesvirtual/rdf/rda2geonames/GeonameService.java) with your Geonames web services user:
 ```
 private static String username = "yourUser";
 ```
+
+Create /opt/tools/geonames folder and add [ner-model.ser.gz](src/main/resources/ner-model.ser.gz).
+Execute mvn clean package
+Execute java -jar target/rda2geonames-0.0.1-jar-with-dependencies.jar http://data.cervantesvirtual.com/manifestation/283249
 
 ## License
 MIT License
