@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/manifestation/673000">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Manifestation"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El telégrafo de Guadalaxara. Tomo 1 / su autor el Dr. D. Francisco Severo Maldonado</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">673000</identifier>
+	<noteOnEditionStatement xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edición digital a partir de Guadalajara [Jalisco] : en la Oficina de Don José Fruto Romero, Año de 1811</noteOnEditionStatement>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/226316"/>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/230142"/>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/268962"/>
+	<dateOfDistribution xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/2014"/>
+	<publisher xmlns="http://rdaregistry.info/Elements/u/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundación</publisher>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/385153"/>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/385154"/>
+	<placeOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alicante : Biblioteca Virtual Miguel de Cervantes, 2014</placeOfPublication>
+	<title xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El telégrafo de Guadalaxara. Tomo 1 / su autor el Dr. D. Francisco Severo Maldonado</title>
+	<bibliographicCitation xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">@Book{BVMC:673000,
+author = {Maldonado, Francisco Severo},
+title = {El telégrafo de Guadalaxara. Tomo 1},
+publisher = {Alicante : Biblioteca Virtual Miguel de Cervantes, 2014},
+year = {2014},
+url = {http://www.cervantesvirtual.com/nd/ark:/59851/bmchx365}./s
+}</bibliographicCitation>
+	<expressionManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/expression/672999"/>
+	<uniformResourceLocator xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://www.cervantesvirtual.com/nd/ark:/59851/bmchx365"/>
+	<language xmlns="http://purl.org/dc/elements/1.1/" rdf:resource="http://data.cervantesvirtual.com/language/es"/>
+	<workManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/work/672998"/>
+	<dateOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/1811"/>
+	<placeOfProduction xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guadalajara [Jalisco] : en la Oficina de Don José Fruto Romero, Año de 1811</placeOfProduction>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/work/672998">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Work"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El telégrafo de Guadalaxara. Tomo 1</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">672998</identifier>
+	<expressionOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/expression/672999"/>
+	<manifestationOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/manifestation/673000"/>
+	<subject xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guadalajara (México) -- Publicaciones periódicas</subject>
+	<author xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/person/70683"/>
+	<titleOfTheWork xmlns="http://rdaregistry.info/Elements/w/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El telégrafo de Guadalaxara. Tomo 1</titleOfTheWork>
+	<formOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://id.loc.gov/authorities/genreForms/gf2014026191"/>
+	<variantTitleForTheWork xmlns="http://rdaregistry.info/Elements/w/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El telégrafo de Guadalajara. Tomo 1</variantTitleForTheWork>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/person/70683">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://schema.org/Person"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Person"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maldonado, Francisco Severo, 1775-1832</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/08/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<owl:sameAs rdf:resource="http://viaf.org/viaf/291182688"/>
+	<owl:sameAs rdf:resource="http://datos.bne.es/resource/XX1228345"/>
+	<owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5867472"/>
+	<authorOf xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/work/672998"/>
+	<authorOf xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/work/673003"/>
+	<dateOfDeath xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/date/1832"/>
+	<identifierForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70683</identifierForThePerson>
+	<dateOfBirth xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/date/1775"/>
+	<variantNameForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Autor del Pacto Social</variantNameForThePerson>
+	<nameOfThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maldonado, Francisco Severo</nameOfThePerson>
+</rdf:Description>
+
+</rdf:RDF>

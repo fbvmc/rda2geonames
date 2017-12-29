@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/manifestation/276754">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Manifestation"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balneario de Carlos III:  sucinta guía para médicos y bañistas</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">276754</identifier>
+	<Organization xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://data.cervantesvirtual.com/institution/6</Organization>
+	<homepage xmlns="http://xmlns.com/foaf/0.1/" rdf:resource="http://adrastea.ugr.es/search~S9*spi?/.b1575039/.b1575039/1,1,1,B/l962~b1575039&amp;FF=&amp;1,0,,0,-1"/>
+	<noteOnEditionStatement xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reproducción digital del original conservado en la Biblioteca de la Universidad de Granada</noteOnEditionStatement>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/254825"/>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/266317"/>
+	<publisher xmlns="http://rdaregistry.info/Elements/u/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundación</publisher>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/26224"/>
+	<title xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balneario de Carlos III:  sucinta guía para médicos y bañistas</title>
+	<bibliographicCitation xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">@Misc{BVMC:276754,
+author = {Balneario de Carlos III (Trillo)},
+title = {Balneario de Carlos III:  sucinta guía para médicos y bañistas},
+url = {http://www.cervantesvirtual.com/obra/balneario-de-carlos-iii-sucinta-guia-para-medicos-y-banistas}
+}</bibliographicCitation>
+	<expressionManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/expression/203840"/>
+	<uniformResourceLocator xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://www.cervantesvirtual.com/obra/balneario-de-carlos-iii-sucinta-guia-para-medicos-y-banistas"/>
+	<language xmlns="http://purl.org/dc/elements/1.1/" rdf:resource="http://data.cervantesvirtual.com/language/es"/>
+	<workManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/work/107386"/>
+	<dateOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/1900"/>
+	<placeOfProduction xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guadalajara : Imprenta Daniel Ramírez, [1900?]</placeOfProduction>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lugar de imp. e impresor tomados de colofón.</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCPB000097560-5</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fecha de imp. probable deducida del texto y CCPB</noteOnManifestation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/work/107386">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Work"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balneario de Carlos III:  sucinta guía para médicos y bañistas</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">107386</identifier>
+	<expressionOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/expression/203840"/>
+	<manifestationOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/manifestation/276754"/>
+	<subject xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">España</subject>
+	<subject xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aguas minerales</subject>
+	<subject xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balnearios</subject>
+	<author xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/corporatebody/35761"/>
+	<titleOfTheWork xmlns="http://rdaregistry.info/Elements/w/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balneario de Carlos III:  sucinta guía para médicos y bañistas</titleOfTheWork>
+</rdf:Description>
+
+</rdf:RDF>

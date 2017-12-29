@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/manifestation/269837">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Manifestation"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"Eisagoge" / Gilb. Genebrardi ... ad legenda &amp;amp; intelligenda hebraeorum &amp;amp; orientalium sine punctis scripta</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">269837</identifier>
+	<Organization xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://data.cervantesvirtual.com/institution/6</Organization>
+	<homepage xmlns="http://xmlns.com/foaf/0.1/" rdf:resource="http://adrastea.ugr.es/search~S9*spi?/.b1100048/.b1100048/1,1,1,B/l962~b1100048&amp;FF=&amp;1,0,,0,-1"/>
+	<noteOnEditionStatement xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reproducción digital del original conservado en la Biblioteca de la Universidad de Granada</noteOnEditionStatement>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/254825"/>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/266317"/>
+	<publisher xmlns="http://rdaregistry.info/Elements/u/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundación</publisher>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/92606"/>
+	<title xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"Eisagoge" / Gilb. Genebrardi ... ad legenda &amp;amp; intelligenda hebraeorum &amp;amp; orientalium sine punctis scripta</title>
+	<bibliographicCitation xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">@Misc{BVMC:269837,
+author = {Génébrard, Gilbert, Arzobispo de Aix},
+title = {"Eisagoge"},
+url = {http://www.cervantesvirtual.com/obra/eisagoge}
+}</bibliographicCitation>
+	<expressionManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/expression/196923"/>
+	<uniformResourceLocator xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://www.cervantesvirtual.com/obra/eisagoge"/>
+	<language xmlns="http://purl.org/dc/elements/1.1/" rdf:resource="http://data.cervantesvirtual.com/language/la"/>
+	<workManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/work/100465"/>
+	<dateOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/1587"/>
+	<placeOfProduction xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parisiis : apud Aegidium Gorbinum..., 1587</placeOfProduction>
+	<otherPFCManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/person/16090"/>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repositorio DIGIBUG</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inic. grab..</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marca tip. en port..</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 ej. de la misma obra.</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-036-180 Colegio de la Compañía de Jesús de Granada</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El ej. A-036-180 mútilo de port., restaurada a partir de la port. del otro ej..</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inicio del tít. transcrito del griego.</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BodLib 00359473</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCSXVI G-591</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anot. ms. en port. facticia: "Ex dono Fr. Iosephi de S. Maria Prioris Cartusiae Hispal. a{486} 1647"</noteOnManifestation>
+</rdf:Description>
+
+
+
+</rdf:RDF>

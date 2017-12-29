@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/manifestation/698774">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Manifestation"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mes amis de tous pays : pos?ies</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">698774</identifier>
+	<Organization xmlns="http://xmlns.com/foaf/0.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://data.cervantesvirtual.com/institution/9</Organization>
+	<homepage xmlns="http://xmlns.com/foaf/0.1/" rdf:resource="http://fondosdigitales.us.es/fondos/libros/5958/"/>
+	<noteOnEditionStatement xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reproducción digital del original conservado en la Biblioteca de la Universidad de Sevilla</noteOnEditionStatement>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/263038"/>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/266317"/>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/404744"/>
+	<title xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mes amis de tous pays : pos?ies</title>
+	<bibliographicCitation xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">@Misc{BVMC:698774,
+author = {Latour, Antoine de},
+title = {A mes amis de tous pays : pos?ies},
+url = {http://www.cervantesvirtual.com/obra/a-mes-amis-de-tous-pays--posies}
+}</bibliographicCitation>
+	<expressionManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/expression/698773"/>
+	<uniformResourceLocator xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://www.cervantesvirtual.com/obra/a-mes-amis-de-tous-pays--posies"/>
+	<language xmlns="http://purl.org/dc/elements/1.1/" rdf:resource="http://data.cervantesvirtual.com/language/fr"/>
+	<workManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/work/698772"/>
+	<dateOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/1867"/>
+	<placeOfProduction xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">París :, [s.n.], 1867</placeOfProduction>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nota Area Public. En cub.: 1868</noteOnManifestation>
+	<dimensions xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19 cm</dimensions>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/person/73059">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://schema.org/Person"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Person"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latour, Antoine de, 1808-1881</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/08/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q5697420"/>
+	<authorOf xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/work/698772"/>
+	<dateOfDeath xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/date/1881"/>
+	<identifierForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">73059</identifierForThePerson>
+	<dateOfBirth xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/date/1808"/>
+	<nameOfThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latour, Antoine de</nameOfThePerson>
+</rdf:Description>
+
+</rdf:RDF>

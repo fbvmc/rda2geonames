@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/manifestation/267866">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Manifestation"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los monteros de Espinosa / [Lope de Vega]</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">267866</identifier>
+	<noteOnEditionStatement xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reproducción digital facsímil del impreso original conservado en la Biblioteca Nacional de España. Sig. U/8725</noteOnEditionStatement>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/222504"/>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/579491"/>
+	<dateOfDistribution xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/2011"/>
+	<publisher xmlns="http://rdaregistry.info/Elements/u/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundación</publisher>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/138820"/>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/187799"/>
+	<placeOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alicante : Biblioteca Virtual Miguel de Cervantes ; Madrid : Biblioteca Nacional, 2011</placeOfPublication>
+	<title xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los monteros de Espinosa / [Lope de Vega]</title>
+	<bibliographicCitation xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">@Misc{BVMC:267866,
+author = {Vega, Lope de},
+title = {Los monteros de Espinosa},
+publisher = {Alicante : Biblioteca Virtual Miguel de Cervantes ; Madrid : Biblioteca Nacional, 2011},
+year = {2011},
+url = {http://www.cervantesvirtual.com/nd/ark:/59851/bmcn30d2}./s
+}</bibliographicCitation>
+	<expressionManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/expression/194952"/>
+	<uniformResourceLocator xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://www.cervantesvirtual.com/nd/ark:/59851/bmcn30d2"/>
+	<language xmlns="http://purl.org/dc/elements/1.1/" rdf:resource="http://data.cervantesvirtual.com/language/es"/>
+	<workManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/work/98384"/>
+	<dateOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/1815"/>
+	<placeOfProduction xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barcelona : por Juan Francisco Piferrer ... véndese en su Librería, administrada por Juan Sellent, y en Madrid en la de Quiroga, [entre 1779-1815]</placeOfProduction>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datos de impresión tomados del colofón</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fecha aproximada de publicación deducida de la actividad del impresor. Juan Sellent administró la imprenta hasta 1815</noteOnManifestation>
+	<noteOnManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morley-Bruerton. Cronología de las comedias de Lope de Vega, p. 516</noteOnManifestation>
+	<publishersName xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piferrer, Juan Francisco</publishersName>
+	<publishersName xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sellent, Juan</publishersName>
+	<publisher xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/person/20004"/>
+	<publisher xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/person/36635"/>
+	<printer xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/corporatebody/36138"/>
+	<noteOnTitle xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aunque atribuida a Lope de Vega, según Morley y Bruerton no pertenece a él</noteOnTitle>
+	<noteOnTitle xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Precede al título: "Núm. 75"</noteOnTitle>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/work/98384">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Work"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los monteros de Espinosa</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">98384</identifier>
+	<expressionOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/expression/194952"/>
+	<manifestationOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/manifestation/267866"/>
+	<subject xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teatro español -- Siglo 17º</subject>
+	<author xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/person/72"/>
+	<titleOfTheWork xmlns="http://rdaregistry.info/Elements/w/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los monteros de Espinosa</titleOfTheWork>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/person/72">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://schema.org/Person"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Person"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vega, Lope de, 1562-1635</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/08/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q165257"/>
+	<dateOfDeath xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/date/1635"/>
+	<identifierForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">72</identifierForThePerson>
+	<dateOfBirth xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/date/1562"/>
+	<variantNameForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un Ingenio de esta Corte</variantNameForThePerson>
+	<variantNameForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vega Carpio, Lope de</variantNameForThePerson>
+	<variantNameForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lope de Vega Carpio, Félix</variantNameForThePerson>
+	<variantNameForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burguillos, Tomé de</variantNameForThePerson>
+	<variantNameForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flórez, Antonio</variantNameForThePerson>
+	<variantNameForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vega y Carpio, Lope de</variantNameForThePerson>
+	<variantNameForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carrera, Luis de la</variantNameForThePerson>
+	<nameOfThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vega, Lope de</nameOfThePerson>
+	<identifierValid xmlns="http://isni.org/ontology#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0000000121029775</identifierValid>
+</rdf:Description>
+
+</rdf:RDF>

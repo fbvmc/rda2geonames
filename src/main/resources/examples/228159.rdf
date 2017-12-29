@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/manifestation/228159">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Manifestation"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doña Luz / Juan Valera</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">228159</identifier>
+	<noteOnEditionStatement xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edición digital basada en la de  Madrid; París, Biblioteca Perojo, [1879].</noteOnEditionStatement>
+	<insertedIn xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/manifestation/220704"/>
+	<dateOfDistribution xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/1999"/>
+	<publisher xmlns="http://rdaregistry.info/Elements/u/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desconocido</publisher>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/21292"/>
+	<exemplarOfManifestation xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/item/66004"/>
+	<placeOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alicante : Biblioteca Virtual Miguel de Cervantes, 1999</placeOfPublication>
+	<title xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doña Luz / Juan Valera</title>
+	<bibliographicCitation xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">@Misc{BVMC:228159,
+author = {Valera, Juan},
+title = {Doña Luz},
+publisher = {Alicante : Biblioteca Virtual Miguel de Cervantes, 1999},
+year = {1999},
+url = {http://www.cervantesvirtual.com/nd/ark:/59851/bmcd50j1}./s
+}</bibliographicCitation>
+	<expressionManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/expression/155245"/>
+	<uniformResourceLocator xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://www.cervantesvirtual.com/nd/ark:/59851/bmcd50j1"/>
+	<language xmlns="http://purl.org/dc/elements/1.1/" rdf:resource="http://data.cervantesvirtual.com/language/es"/>
+	<concordance xmlns="http://rdaregistry.info/Elements/u/" rdf:resource="http://www.cervantesvirtual.com/concordancias/dona-luz--0"/>
+	<workManifested xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/work/7760"/>
+	<dateOfPublication xmlns="http://rdaregistry.info/Elements/m/" rdf:resource="http://data.cervantesvirtual.com/date/1879"/>
+	<placeOfProduction xmlns="http://rdaregistry.info/Elements/m/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madrid; París, Biblioteca Perojo, [1879].</placeOfProduction>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/work/7760">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Work"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doña Luz</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28/07/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<identifier xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7760</identifier>
+	<expressionOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/expression/155245"/>
+	<manifestationOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/manifestation/716333"/>
+	<manifestationOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/manifestation/713879"/>
+	<manifestationOfWork xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/manifestation/228159"/>
+	<subject xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novela española -- Siglo 19º</subject>
+	<author xmlns="http://rdaregistry.info/Elements/w/" rdf:resource="http://data.cervantesvirtual.com/person/34"/>
+	<titleOfTheWork xmlns="http://rdaregistry.info/Elements/w/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doña Luz</titleOfTheWork>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.cervantesvirtual.com/person/34">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdf:type rdf:resource="http://schema.org/Person"/>
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/Person"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valera, Juan, 1824-1905</rdfs:label>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/08/2016</created>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://fundacion.cervantesvirtual.com"/>
+	<owl:sameAs rdf:resource="http://data.bnf.fr/11999110"/>
+	<owl:sameAs rdf:resource="http://isni-url.oclc.nl/isni/0000000121309726"/>
+	<owl:sameAs rdf:resource="http://viaf.org/viaf/46770556"/>
+	<owl:sameAs rdf:resource="http://dbpedia.org/resource/Juan_Valera_y_Alcal%25C3%25A1-Galiano"/>
+	<owl:sameAs rdf:resource="http://dbpedia.org/resource/Juan_Valera"/>
+	<owl:sameAs rdf:resource="http://dbpedia.org/resource/Juan_Valera_y_Alcala_Galiano"/>
+	<owl:sameAs rdf:resource="http://dbpedia.org/resource/Juan_Valera_y_Alcala-Galiano"/>
+	<owl:sameAs rdf:resource="http://datos.bne.es/resource/XX918093"/>
+	<owl:sameAs rdf:resource="http://dbpedia.org/resource/Juan_Valera_y_Alcal%25C3%25A1_Galiano"/>
+	<owl:sameAs rdf:resource="http://dbpedia.org/resource/Juan_Valera_y_Alcal%C3%A1-Galiano"/>
+	<owl:sameAs rdf:resource="http://data.bnf.fr/11999110#skos:Concept"/>
+	<owl:sameAs rdf:resource="http://dbpedia.org/resource/Juan_Galiano"/>
+	<owl:sameAs rdf:resource="http://bnb.data.bl.uk/id/person/ValeraJuan1824-1905"/>
+	<owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q463630"/>
+	<dateOfDeath xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/date/1905"/>
+	<identifierForThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</identifierForThePerson>
+	<dateOfBirth xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/date/1824"/>
+	<nameOfThePerson xmlns="http://rdaregistry.info/Elements/a/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valera, Juan</nameOfThePerson>
+	<publisherOf xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/expression/596806"/>
+	<publisherOf xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/manifestation/679232"/>
+	<translatorOf xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/expression/159872"/>
+	<translatorOf xmlns="http://rdaregistry.info/Elements/a/" rdf:resource="http://data.cervantesvirtual.com/expression/170730"/>
+</rdf:Description>
+
+</rdf:RDF>
