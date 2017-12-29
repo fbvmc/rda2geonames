@@ -34,6 +34,5 @@ public class GeonameService
 			}
 		}
         return searchResult;
-
     }
 }

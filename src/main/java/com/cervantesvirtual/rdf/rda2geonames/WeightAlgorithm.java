@@ -10,7 +10,7 @@ import org.geonames.ToponymSearchResult;
 
 import com.cervantesvirtual.rdf.rda2geonames.model.GeonameItem;
 import com.cervantesvirtual.rdf.rda2geonames.model.NERItem;
-import com.cervantesvirtual.rdf.rda2geonames.model.RDAItem;
+import com.cervantesvirtual.rdf.rda2geonames.model.RDFItemFile;
 
 public class WeightAlgorithm {
 
@@ -30,7 +30,7 @@ public class WeightAlgorithm {
 		this.setForceStatistics(forceStatistics);
 	}
 	
-	public void process(RDAItem item){
+	public void process(RDFItemFile item){
 		logger.trace("start process weight size place tokens:" + item.getPlaceTokens().size());
 		if(item.getPlaceTokens().size() > 0){
 			for (Object e : item.getPlaceTokens()) {
@@ -39,7 +39,7 @@ public class WeightAlgorithm {
 				queryPlace = queryPlace.replaceAll("\\?", "");
 				queryPlace = queryPlace.replaceAll("Cordoua", "Córdoba");
 				queryPlace = queryPlace.replaceAll("Cordubae", "Córdoba");
-				logger.trace("queryPlace:" + queryPlace);
+				logger.trace("place publication query to execute on Geonames:" + queryPlace);
 				GeonameService geonames = new GeonameService();
 				
 				ToponymSearchResult searchResult = geonames.search(queryPlace);
@@ -49,7 +49,7 @@ public class WeightAlgorithm {
 				
 				for(Toponym t: searchResult.getToponyms()){
 					GeonameItem geonameItem = new GeonameItem();
-					geonameItem.setUri(item.getUri());
+					geonameItem.setUri(item.getRdfPath());
 					geonameItem.setCountry(t.getCountryName());
 					geonameItem.setPlace(t.getName());
 					geonameItem.setIdGeonames(t.getGeoNameId()+"");
@@ -72,7 +72,6 @@ public class WeightAlgorithm {
 						}
 					}
 					
-					
 					for (Object s : item.getSubjectTokens()) {
 						String querySubject = ((NERItem)s).getValue();
 						
@@ -93,7 +92,6 @@ public class WeightAlgorithm {
 						
 						// remove query place in title Sevilla Cordoba 563300
 						queryTitle = queryTitle.replaceAll(queryPlace, "").trim();
-						//logger.trace("titletokens weight algo:" + queryTitle);
 						
 						if(!queryTitle.isEmpty() && !queryTitle.equalsIgnoreCase(queryPlace)){
 							ToponymSearchResult searchResultSubject = geonames.search(queryTitle);
@@ -164,9 +162,10 @@ public class WeightAlgorithm {
 			setWeightSameCountry();
 			
 			GeonameItem maxItem = getMaxValue();
-			CompareItemsService.compare(maxItem.getUri(), maxItem.getIdGeonames());
+			//CompareItemsService.compare(maxItem.getUri(), maxItem.getIdGeonames());
 			
 			logger.trace("#### Weight algorithm result:" + maxItem);
+			logger.info("Result:" + maxItem.getPlace() + " idGeonames:" + maxItem.getIdGeonames() + " country:" + maxItem.getCountry());
 		}
 	}
 	
@@ -176,7 +175,7 @@ public class WeightAlgorithm {
 			resultItem = result.get(0);
 		
 		for(GeonameItem ge: result){
-			logger.trace("compare:" + ge);
+			logger.trace("getMaxValue() compare:" + ge);
 			if(resultItem.getPonderatedValue() < ge.getPonderatedValue())
 				resultItem = ge;
 			else if(forceStatistics && resultItem.getPonderatedValue() == ge.getPonderatedValue()){

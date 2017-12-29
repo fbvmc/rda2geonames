@@ -35,20 +35,68 @@ public class WikidataService {
 		
 		Query query = QueryFactory.create(sparql);
 		QueryExecution qExe = QueryExecutionFactory.sparqlService( wikidataServer, query );
+		try{
 		
-		ResultSet results = qExe.execSelect();
-		//ResultSetFormatter.out(System.out, results, query);
+			ResultSet results = qExe.execSelect();
+			//ResultSetFormatter.out(System.out, results, query);
+			
+			while ( results.hasNext() ) {
+	            final QuerySolution qs = results.next();
+	            
+	            if(qs.get( "deathplacename" ) != null )
+	            	wikidataLocations.add(qs.get( "deathplacename" ).asLiteral().getString());
+	            if(qs.get( "birthplacename" ) != null )
+	            	wikidataLocations.add(qs.get( "birthplacename" ).asLiteral().getString());
+	            if(qs.get( "nationalityname" ) != null )
+	            	wikidataLocations.add(qs.get( "nationalityname" ).asLiteral().getString());
+	        }
 		
-		while ( results.hasNext() ) {
-            final QuerySolution qs = results.next();
-            
-            if(qs.get( "deathplacename" ) != null )
-            	wikidataLocations.add(qs.get( "deathplacename" ).asLiteral().getString());
-            if(qs.get( "birthplacename" ) != null )
-            	wikidataLocations.add(qs.get( "birthplacename" ).asLiteral().getString());
-            if(qs.get( "nationalityname" ) != null )
-            	wikidataLocations.add(qs.get( "nationalityname" ).asLiteral().getString());
-        }
+		}finally{
+			qExe.close();
+		}
+		
+		return wikidataLocations;
+	}
+	
+	public ArrayList<String> getAuthorData(String wikidataId) throws Exception{
+		
+		ArrayList<String> wikidataLocations = new ArrayList<String>();
+		
+		String sparql = "PREFIX wdt: <http://www.wikidata.org/prop/direct/> " +
+				"PREFIX wd: <http://www.wikidata.org/entity/> " +
+		        "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+		        "SELECT distinct ?birthplacename ?deathplacename ?nationalityname " +
+                "WHERE " +
+                "{ " +
+                  "wd:"+ wikidataId +" ?p ?o . " +
+                  "OPTIONAL {wd:"+ wikidataId +" wdt:P20 ?deathplace . ?deathplace wdt:P1448 ?deathplacename} . " +
+                  "OPTIONAL {wd:"+ wikidataId +" wdt:P19 ?birthplace . ?birthplace wdt:P1448 ?birthplacename} . " +
+                  "OPTIONAL {wd:"+ wikidataId +" wdt:P27 ?nationality . ?nationality rdfs:label ?nationalityname . FILTER(LANG(?nationalityname) = \"es\")} . " +
+                "}" +
+                "LIMIT 100";
+		//System.out.println("Sparql query wikidata:" + sparql);
+		
+		Query query = QueryFactory.create(sparql);
+		QueryExecution qExe = QueryExecutionFactory.sparqlService( wikidataServer, query );
+		try{
+		
+			ResultSet results = qExe.execSelect();
+			//ResultSetFormatter.out(System.out, results, query);
+			
+			while ( results.hasNext() ) {
+	            final QuerySolution qs = results.next();
+	            
+	            if(qs.get( "deathplacename" ) != null )
+	            	wikidataLocations.add(qs.get( "deathplacename" ).asLiteral().getString());
+	            if(qs.get( "birthplacename" ) != null )
+	            	wikidataLocations.add(qs.get( "birthplacename" ).asLiteral().getString());
+	            if(qs.get( "nationalityname" ) != null )
+	            	wikidataLocations.add(qs.get( "nationalityname" ).asLiteral().getString());
+	        }
+		
+		}finally{
+			qExe.close();
+		}
 		
 		return wikidataLocations;
 	}

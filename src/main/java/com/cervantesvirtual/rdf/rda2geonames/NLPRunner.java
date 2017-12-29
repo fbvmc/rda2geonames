@@ -1,7 +1,5 @@
 package com.cervantesvirtual.rdf.rda2geonames;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -12,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.cervantesvirtual.rdf.rda2geonames.model.NERItem;
-import com.cervantesvirtual.rdf.rda2geonames.model.RDAItem;
+import com.cervantesvirtual.rdf.rda2geonames.model.RDFItemFile;
 
 import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
@@ -25,14 +23,14 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class NLPRunner {
 	
-	private List<RDAItem> RDAItems;
+	private List<RDFItemFile> RDFItems;
 	private StanfordCoreNLP pipeline;
 
 	public NLPRunner() {
-		RDAItems = new ArrayList<RDAItem>();
+		RDFItems = new ArrayList<RDFItemFile>();
 	}
 
-	public void start() throws MalformedURLException, IOException {
+	public void start(String nerModelPath) throws MalformedURLException, IOException {
 		// creates a StanfordCoreNLP object, with POS tagging, lemmatization,
 		// NER, parsing, and
 		Properties props = new Properties();
@@ -46,7 +44,8 @@ public class NLPRunner {
 		// props.setProperty("ner.model",
 		// "edu/stanford/nlp/models/ner/spanish.ancora.distsim.s512.crf.ser.gz");
 		//props.setProperty("ner.model", "src/main/resources/ner-model.ser.gz");
-		props.setProperty("ner.model", "/opt/tools/geonames/ner-model.ser.gz"); // configuration for jar
+		//props.setProperty("ner.model", "/opt/tools/geonames/ner-model.ser.gz"); // configuration for jar
+		props.setProperty("ner.model", nerModelPath);
 		// props.setProperty("regexner.mapping",
 		// "edu/stanford/nlp/models/kbp/kbp_regexner_mapping_sp.tag");
 		props.setProperty("ner.applyNumericClassifiers", "false");
@@ -54,7 +53,7 @@ public class NLPRunner {
 
 		pipeline = new StanfordCoreNLP(props);
 
-		for (RDAItem ri : RDAItems) {
+		for (RDFItemFile ri : RDFItems) {
 
 			process(ri.getPlacePublication(), ri.getPlaceTokens());
             process(ri.getTitle(), ri.getTitleTokens());
@@ -92,7 +91,6 @@ public class NLPRunner {
 	}
 	
 	public void process(String s, List<NERItem> items){
-		
 		
 		s = s.replaceAll("\\[", " ");
 		s = s.replaceAll("\\]", " ");
@@ -154,24 +152,28 @@ public class NLPRunner {
 		
 		NLPRunner nlp = new NLPRunner();
 		
-		//String fileName = "src/main/resources/uris.txt";
-		String uri = "http://data.cervantesvirtual.com/manifestation/283249";
+		String rdfPath = "";
+		String nerModelPath = "";
 		if(args.length == 0){
-	        logger.trace("Proper Usage is: java -jar rda2geonames-0.0.1-jar-with-dependencies.jar uri");
-	        logger.trace("Default uri:" + uri);
+	        logger.trace("Proper usage is: java -jar rda2geonames-0.0.2-jar-with-dependencies.jar nerModelPath rdfpath ");
+	        //exit 0; //TODO force out of the program
 	    }else{
-	    	uri = args[0];
+	    	nerModelPath = args[0];
+	    	rdfPath = args[1];
 	    }
 		
 		try{
-		    nlp.RDAItems.add(new RDAItem(uri));
+		    nlp.RDFItems.add(new RDFItemFile(rdfPath));
 			boolean forceStatistics = false;
-		    nlp.start();
-		    for(RDAItem ri: nlp.RDAItems){
+			logger.trace("start ner process model");
+		    nlp.start(nerModelPath);
+		    logger.trace("finish ner process model");
+		    for(RDFItemFile ri: nlp.RDFItems){
 		    	ri.showNER();
 		    	WeightAlgorithm weightAlgorithm = new WeightAlgorithm(forceStatistics);
-		    	logger.trace("### Init process for place of publication: " + ri.getPlacePublication());
+		    	logger.trace("### Init weightAlgorithm process for place of publication: " + ri.getPlacePublication());
 		    	weightAlgorithm.process(ri);
+		    	logger.trace("### finish weightAlgorithm process for place of publication: " + ri.getPlacePublication());
 		    }
 		}catch(Exception e){
 			logger.trace("Error:" + e.getMessage());

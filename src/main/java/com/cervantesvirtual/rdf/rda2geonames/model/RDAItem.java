@@ -180,8 +180,9 @@ public class RDAItem {
 	public void setFRBR(){
 		File rdfFile = new File( DOWNLOAD_FOLDER, "manifestation-" + idManifestation + ".rdf");
 		try {
-			 FileManager.get().addLocatorClassLoader(RDAItem.class.getClassLoader());
-			FileUtils.copyURLToFile(new URL(DOWNLOAD_URL + uri), rdfFile);logger.trace("rdfFile.getPath:" + rdfFile.getPath());
+			FileManager.get().addLocatorClassLoader(RDAItem.class.getClassLoader());
+			FileUtils.copyURLToFile(new URL(DOWNLOAD_URL + uri), rdfFile);
+			logger.trace("rdfFile.getPath:" + rdfFile.getPath());
 			manifestationModel = FileManager.get().loadModel(rdfFile.getPath(), null, "RDF/XML");
 			
 			Property titleProperty = manifestationModel.createProperty("http://rdaregistry.info/Elements/m/title");
@@ -201,8 +202,7 @@ public class RDAItem {
 					this.setPlacePublication(placeOfProduction.getString());
 				}
 			}
-			
-			 
+						 
 			Property partProperty = manifestationModel.createProperty("http://rdaregistry.info/Elements/m/wholePartManifestationRelationship");
 			NodeIterator parts = manifestationModel.listObjectsOfProperty(partProperty);
 			if(parts != null){
